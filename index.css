@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+    --glow-rgb: 239 42 201;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    -webkit-font-smoothing: antialiased;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    height: 100vh;
+    overflow: hidden;
+    font-family:'Raleway', sans-serif;
+    background-image: 
+    linear-gradient(hotpink 1px, transparent 1px),
+    linear-gradient(90deg, hotpink 1px, transparent 1px),
+    repeating-linear-gradient(hotpink 1px, transparent 1px),
+    repeating-linear-gradient(90deg, hotpink 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+  background-color: rgb(122, 122, 122);
+  margin-right: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 10 / 16;
+  width: 210px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 3px solid white;
+  position: relative;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.card:active {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+.card img {
+    z-index: 1;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.card-content {
+    font-family: "Source Code Pro", monospace;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    color: white;
+}
+
+.card-content > p {
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 80%;
+}
+
+.card-content > h2{
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.flex {
+  min-height:50vh;
+  position: absolute;
+  margin-bottom: -50%;
+}
+
+a.btn {
+  color:#FF0072;
+  text-decoration:none;
+  -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+  &:hover {
+    color:#FFF;
+  }
+  &:focus {
+    color:#FFF;
+  }
+}
+
+a.btn-dark {
+  color:#644cad;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+  &:hover {
+    color:#FFF;
+  }
+  &:focus {
+    color:#FFF;
+  }
+}
+
+.btn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid#FF0072;
+  border-radius: 2px;
+  box-shadow:  0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+  &:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -2;
+  }
+  &:hover {
+    &:before {
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+  &:focus {
+    &:before {
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity :1;
+    }
+  }
+}
+
+.btn-dark {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid #644cad;
+  border-radius: 2px;
+  position: relative;
+  box-shadow:  0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+  z-index: 2;
+  &:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color:#644cad;
+    z-index: -1;
+  }
+  &:hover {
+    &:before {
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+  &:focus {
+    &:before {
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+}

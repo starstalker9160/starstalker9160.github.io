@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(145deg, rgb(20, 6, 34), rgb(87, 9, 74));
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
