@@ -8,12 +8,7 @@
   box-sizing: border-box;
 }
 
-:root {
-    --glow-rgb: 239 42 201;
-}
-
 body {
-    font-family: 'Source Code Pro', monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -25,10 +20,10 @@ body {
     overflow: hidden;
     font-family:'Raleway', sans-serif;
     background-image: 
-    linear-gradient(hotpink 1px, transparent 1px),
-    linear-gradient(90deg, hotpink 1px, transparent 1px),
-    repeating-linear-gradient(hotpink 1px, transparent 1px),
-    repeating-linear-gradient(90deg, hotpink 1px, transparent 1px);
+    linear-gradient(rgb(63, 20, 41) 2px, transparent 1px),
+    linear-gradient(90deg, rgb(63, 20, 41) 2px, transparent 1px),
+    repeating-linear-gradient(rgb(63, 20, 41) 2px, transparent 1px),
+    repeating-linear-gradient(90deg, rgb(63, 20, 41) 2px, transparent 1px);
     background-size: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
     background-position: center;
 }
@@ -49,6 +44,7 @@ body {
 }
 
 .card {
+  user-select: none;
   background-color: rgb(122, 122, 122);
   margin-right: 20px;
   display: inline-flex;
@@ -63,7 +59,9 @@ body {
   overflow: hidden;
   border: 3px solid white;
   position: relative;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .card:hover {
@@ -75,7 +73,6 @@ body {
 }
 
 .card img {
-    z-index: 1;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 1rem;
@@ -112,10 +109,13 @@ body {
     font-style: normal;
 }
 
-.flex {
-  min-height:50vh;
+.contactBtn {
   position: absolute;
-  margin-bottom: -50%;
+  z-index: 3;
+  top: 75%;
+  transform: translateY(-50%);
+  user-select: none;
+  cursor: pointer;
 }
 
 a.btn {
@@ -233,4 +233,85 @@ a.btn-dark {
       opacity: 1;
     }
   }
+}
+
+.popup {
+  z-index: 5;
+  position: fixed;
+  top: -100vh;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: top 0ms ease-in-out 300ms;
+}
+
+.popup .overlay { 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 100ms ease-in-out 200ms;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.15);
+  opacity: 0;
+  width: 95%;
+  max-width: 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  transition: all 300ms ease-in-out 300ms;
+}
+
+.popup .content > h2 {
+  font-family:'Raleway', sans-serif;
+  margin: 10px 0;
+  font-size: 25px;
+  color: #111;
+  text-align: center;
+}
+
+.popup .content > p {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #222;
+  text-align: center;
+}
+
+.popup .content .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .content .controls > button {
+
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.popup.active {
+  top: 0px;
+}
+
+.popup.active .overlay {
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.popup.active .content {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
