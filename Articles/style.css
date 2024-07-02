@@ -6,3 +6,20 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
 }
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.logo > img {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
