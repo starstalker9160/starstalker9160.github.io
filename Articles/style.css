@@ -1,3 +1,13 @@
+body {
+    height: 100vh;
+    min-width: 1920px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
 .logo {
     position: absolute;
     top: 20px;
@@ -13,4 +23,71 @@
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carouselItem {
+    flex: 0 1 auto;
+    margin: 0 10px;
+    height: 350px;
+    aspect-ratio: 10 / 7;
+    border: 3px solid black;
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.carouselItem:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.carouselItem:active {
+    transform: scale(0.99);
+}
+
+.carouselImg {
+    height: 50%;
+    width: 100%;
+    background-image: url(/Assets/Water.png);
+    border-bottom: 3px solid black;
+}
+
+.carouselItemTitle {
+    font-size: 30px;
+    align-content: center;
+    width: 100%;
+    aspect-ratio: 9 / 1;
+    border-bottom: 3px solid black;
+}
+
+.carouselContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+}
+
+.carouselItemDescription {
+    border-right: 3px solid black;
+    font-size: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.githubLink {
+    width: 50%;
+    text-align: center;
 }
