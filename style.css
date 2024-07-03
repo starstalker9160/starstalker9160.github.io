@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    min-width: 1920px;
+    min-width: 720px;
 }
 
 a {
@@ -107,6 +107,31 @@ button:active {
     font-variation-settings: "wdth" 125;
     line-height: 1.2;
     font-size: 100px;
+}
+
+.popup {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.popup::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.popupTitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #11101A;
+    font-size: 28px;
+}
+
+.popupText {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
 }
 
 ::selection {
