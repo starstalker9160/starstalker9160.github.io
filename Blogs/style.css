@@ -96,6 +96,7 @@ a {
     font-size: 20px;
     width: 50%;
     height: 100%;
+    margin-left: 4px;
 }
 
 .githubLink {
@@ -107,7 +108,7 @@ a {
 .carouselItem2 {
     flex: 0 1 auto;
     margin: 0 10px;
-    width: 350px;
+    width: 390px;
     aspect-ratio: 10 / 4;
     border: 3px solid black;
     background-color: white;
@@ -126,6 +127,8 @@ a {
 .carouselItemDescription2 {
     font-size: 20px;
     text-wrap: normal;
+    margin-left: 4px;
+    margin-top: 2px;
 }
 
 ::selection {
