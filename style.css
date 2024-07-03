@@ -5,6 +5,10 @@ body {
     min-width: 1920px;
 }
 
+a {
+    color: #E63462;
+}
+
 button {
     background-color: white;
     margin: 5px 0px;
@@ -105,3 +109,7 @@ button:active {
     font-size: 100px;
 }
 
+::selection {
+    background-color: #C7EFCF;
+    color: black;
+}
