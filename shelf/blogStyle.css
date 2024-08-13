@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0%;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -6,7 +8,6 @@ body {
     font-variation-settings: "wdth" 100;
     display: flex;
     min-height: 100vh;
-    margin: 0;
     word-wrap: break-word;
     font-size: 22px;
     line-height: 30px;

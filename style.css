@@ -1,3 +1,5 @@
+html { background-color: #fff5f8; }
+
 body {
     margin: 0;
     padding: 0;
@@ -9,23 +11,34 @@ a {
     color: #E63462;
 }
 
+hr {
+    width: 2px;
+    border: none;
+    background-color: #474747;
+}
+
 button {
+    user-select: none;
     background-color: white;
-    margin: 5px 0px;
-    border: 3px solid black;
+    border: 1px solid #FE5F55;
+    color: #E63462;
     font-family: "IBM Plex Mono", monospace;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
-    padding-top: 25px;
+    font-size: 25px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 button:hover {
-    background-color: #7575756c;
+    background-color: #FE5F55;
+    color: white;
 }
-button:active {
-    background-color: #7474749f;
+
+span{
+    user-select: none;
+    color: #7b7b7d;
 }
 
 .logo {
@@ -52,8 +65,17 @@ button:active {
 
 .main {
     flex: 0 0 50%;
-    overflow: hidden;
     align-content: center;
+    text-align: center;
+}
+
+.indexText {
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #474747;
+    font-size: 32px;
     text-align: center;
 }
 
@@ -63,21 +85,22 @@ button:active {
     font-weight: 400;
     font-style: normal;
     font-size: 25px;
+    color: #7b7b7b;
 }
 
 .buttonHolder {
+    padding: 5% 30%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(60%);
+    justify-content: center;
+    height: 100%;
 }
 
-.articlesButt{
-    padding: 50px 51px;
+.buttonHolder .articlesButt {
+    height: calc(3% * 100%);
 }
 
-.contactButt{
-    padding: 10px 69px;
+.contactButt {
+    height: 3%;
 }
 
 .banner {
@@ -104,6 +127,7 @@ button:active {
     font-family: "Tourney", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #474747;
     font-variation-settings: "wdth" 125;
     line-height: 1.2;
     font-size: 100px;
@@ -113,6 +137,7 @@ button:active {
     align-items: center;
     align-content: center;
     text-align: center;
+    border: 1px solid #FE5F55;
 }
 
 .popup::backdrop {
