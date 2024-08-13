@@ -30,8 +30,8 @@ button:active {
 
 .logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 90px;
+    left: 90px;
     z-index: 9999;
 }
 
