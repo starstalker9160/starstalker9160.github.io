@@ -1,0 +1,166 @@
+html { background-color: #fff5f8; }
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    min-width: 720px;
+}
+
+a {
+    color: #E63462;
+}
+
+hr {
+    width: 2px;
+    border: none;
+    background-color: #474747;
+}
+
+button {
+    user-select: none;
+    background-color: white;
+    border: 1px solid #FE5F55;
+    color: #E63462;
+    font-family: "IBM Plex Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #FE5F55;
+    color: white;
+}
+
+
+h1 {
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #474747;
+    font-size: 32px;
+    text-align: center;
+}
+
+span{
+    user-select: none;
+    color: #7b7b7d;
+}
+
+.logo {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    z-index: 9999;
+}
+
+.logo > img {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    flex: 0 0 50%;
+    align-content: center;
+    text-align: center;
+}
+
+.textStuff {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #7b7b7b;
+}
+
+.buttonHolder {
+    padding: 5% 30%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.buttonHolder .articlesButt {
+    height: calc(3% * 100%);
+}
+
+.contactButt {
+    height: 3%;
+}
+
+.banner {
+    flex: 0 0 30%;
+    overflow: hidden;
+    display: flex;
+    background-image: url(Assets/banner.png);
+    background-repeat: no-repeat;
+    background-size: 79%;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    flex: 0 0 20%;
+    overflow: hidden;
+    writing-mode: vertical-rl;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    font-family: "Tourney", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #474747;
+    font-variation-settings: "wdth" 125;
+    line-height: 1.2;
+    font-size: 100px;
+}
+
+.popup {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: 1px solid #FE5F55;
+}
+
+.popup::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.popupTitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #11101A;
+    font-size: 28px;
+}
+
+.popupText {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+::selection {
+    background-color: #C7EFCF;
+    color: black;
+}
