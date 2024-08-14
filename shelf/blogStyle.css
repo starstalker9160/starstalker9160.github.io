@@ -1,3 +1,5 @@
+html { background-color: #fff5f8; }
+
 body {
     margin: 0;
     padding: 0%;
@@ -67,13 +69,11 @@ p {
 
 .sidebar {
     width: 15%;
-    background-color: #FBFBFF;
 }
 
 .mainContent {
     flex: 1;
     padding: 2%;
-    background-color: white;
 }
 
 ::selection {

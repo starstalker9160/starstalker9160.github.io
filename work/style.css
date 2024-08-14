@@ -60,14 +60,13 @@ span{
     border: 1px solid #FE5F55;
     text-align: center;
     height: calc(fit-content + 300px);
-    transition: transform 0.05s ease-in;
+    transition: transform 0.05s ease;
 }
 
 .card:hover {
     transform: translate(2px, -2px);
     cursor: pointer;
     box-shadow: -3px 3px 3px #b3b3b3;
-    height: fit-content;
 }
 
 .cardTitle {
