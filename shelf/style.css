@@ -27,8 +27,8 @@ span{
 
 .logo {
     position: absolute;
-    top: 90px;
-    left: 90px;
+    top: 9vh;
+    left: 9vh;
     z-index: 9999;
 }
 

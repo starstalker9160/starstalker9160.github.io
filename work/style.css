@@ -27,8 +27,8 @@ span{
 
 .logo {
     position: absolute;
-    top: 90px;
-    left: 90px;
+    top: 9vh;
+    left: 9vh;
     z-index: 9999;
 }
 
@@ -52,10 +52,10 @@ span{
 
 .card {
     position: relative;
-    aspect-ratio: 1 / 0.6;
     background-color: white;
     border: 1px solid #FE5F55;
     text-align: center;
+    height: calc(fit-content + 300px);
     transition: transform 0.05s ease-in;
 }
 
@@ -63,6 +63,7 @@ span{
     transform: translate(2px, -2px);
     cursor: pointer;
     box-shadow: -3px 3px 3px #b3b3b3;
+    height: fit-content;
 }
 
 .cardTitle {
@@ -79,13 +80,10 @@ span{
 }
 
 .cardDesc {
+    flex: 1;
     user-select: none;
-    align-items: center;
-    transform: translate(0px, 50%);
-    justify-content: center;
     font-family: "IBM Plex Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 15px;
-    text-wrap: normal;
 }

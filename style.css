@@ -7,16 +7,6 @@ body {
     min-width: 720px;
 }
 
-a {
-    color: #E63462;
-}
-
-hr {
-    width: 2px;
-    border: none;
-    background-color: #474747;
-}
-
 button {
     user-select: none;
     background-color: white;
@@ -54,8 +44,8 @@ span{
 
 .logo {
     position: absolute;
-    top: 90px;
-    left: 90px;
+    top: 9vh;
+    left: 9vh;
     z-index: 9999;
 }
 
@@ -90,18 +80,46 @@ span{
 }
 
 .buttonHolder {
-    padding: 5% 30%;
+    padding: 5% 0%;
+    margin: 0px 0px;
     display: flex;
-    justify-content: center;
     height: 100%;
+    justify-content: center;
 }
 
-.buttonHolder .articlesButt {
-    height: calc(3% * 100%);
+.buttonHolder > a {
+    color: #E63462;
 }
 
-.contactButt {
-    height: 3%;
+.buttonHolder > hr {
+    width: 1px;
+    padding: 0px 0px;
+    margin: 0px 50px;
+    border: none;
+    background-color: #474747;
+}
+
+.articlesButt {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    height: 4vh;
+}
+
+.socials {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.socials > hr {
+    width: 1px;
+    margin: 0px 30px;
+    border: none;
+    background-color: #474747;
+}
+
+.socials > a {
+    color: #474747;
 }
 
 .banner {
