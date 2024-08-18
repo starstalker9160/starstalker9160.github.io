@@ -24,14 +24,6 @@ p {
     color: #7b7b7d;
 }
 
-img {
-    aspect-ratio: 16 / 9;
-    max-height: 125px;
-    border-right: 1px solid #FE5F55;
-    margin: 0px 0px;
-    padding: 0px 0px;
-}
-
 span{
     user-select: none;
     color: #7b7b7d;
@@ -56,30 +48,25 @@ span{
 }
 
 .content {
-    margin: 3% 5%;
-    gap: 16px;
+    margin: 3% 22%;
 }
 
 .card {
     overflow: hidden;
     padding: 0px 0px;
     margin: 0px 0px;
-    display: flex;
-    border: 1px solid #FE5F55;
-    border-radius: 10px;
-    transition: all 0.05s ease;
+    transition: all 0.2s ease;
 }
 
 .card:hover {
-    transform: translate(0px, -5px);
-    box-shadow: 0px 3px 3px #b3b3b3;
     cursor: pointer;
+	background-color: white;
 }
 
 .cardContent {
-    padding: 0px 0px;
-    margin: 0px 0px;
-    width: 100%;
+	padding: 0px 0px;
+	margin: 0px 0px;
+	width: 100%;
 }
 
 .cardTitle {
@@ -87,16 +74,17 @@ span{
     margin: 0px 0px;
     height: 35%;
     width: 100%;
-    align-content: center;
-    font-family: "IBM Plex Mono", sans-serif;
+	text-align: center;
+	font-family: "IBM Plex Mono", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 23px;
 }
 
 .cardDesc {
-    padding: 0px 0px;
-    margin: 0px 0px;
+    padding: 0px 15px;
+    padding-top: 3px;
+	margin: 0px 0px;
     max-height: 65%;
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
