@@ -19,13 +19,20 @@ a {
     color: #E63462;
 }
 
+i {
+    color: #7b7b7b;
+    font-size: 18px;
+}
+
 h1 {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
-    font-size: 50px;
-    color: #11101A;
-    line-height: 10px;
+    color: #E63462;
+    font-size: 55px;
+    padding-top: 8px;
+    margin: 0px;
 }
 
 h2 {
@@ -33,21 +40,29 @@ h2 {
     font-weight: 500;
     font-style: normal;
     font-size: 30px;
-    color: #11101A;
+    color: #474747;
 }
 
 hr {
-    height: 4px;
+    height: 2px;
     width: 100%;
     border: none;
-    background-color: #FE5F55;
+    background-color: #474747;
 }
 
 p {
-    max-width: 90%;
     word-wrap: break-word;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 30px;
+    color: #7b7b7b;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::selection {
+    background-color: #C7EFCF;
+    color: black;
 }
 
 .logo {
@@ -67,16 +82,23 @@ p {
     -webkit-user-select: none;
 }
 
-.sidebar {
-    width: 15%;
+.content {
+    padding: 0px 25%;
+    padding-top: 10%;
+    width: 100%;
 }
 
-.mainContent {
-    flex: 1;
-    padding: 2%;
+.topStuff {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #7b7b7b;
 }
 
-::selection {
-    background-color: #C7EFCF;
-    color: black;
+.date {
+    padding-left: 0px;
 }

@@ -57,6 +57,7 @@ span{
 .card {
     position: relative;
     background-color: white;
+    border-radius: 5px;
     border: 1px solid #FE5F55;
     text-align: center;
     height: calc(fit-content + 300px);

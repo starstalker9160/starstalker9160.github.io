@@ -55,12 +55,14 @@ span{
     overflow: hidden;
     padding: 0px 0px;
     margin: 0px 0px;
+    border-radius: 10px;
     transition: all 0.2s ease;
 }
 
 .card:hover {
     cursor: pointer;
-	background-color: white;
+	background-color: #fffbfc;
+    border-radius: 10px;
 }
 
 .cardContent {
@@ -75,19 +77,18 @@ span{
     height: 35%;
     width: 100%;
 	text-align: center;
-	font-family: "IBM Plex Mono", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 23px;
-}
-
-.cardDesc {
-    padding: 0px 15px;
-    padding-top: 3px;
-	margin: 0px 0px;
-    max-height: 65%;
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 17px;
+    font-size: 25px;
+}
+
+.cardDesc {
+    padding: 0px 70px;
+    padding-top: 3px;
+	margin: 0px 0px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
