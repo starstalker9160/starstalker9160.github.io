@@ -66,9 +66,32 @@ span{
 }
 
 .cardContent {
-	padding: 0px 0px;
+	padding: 0px 20px;
 	margin: 0px 0px;
 	width: 100%;
+}
+
+.cardInfo {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #7b7b7d;
+}
+
+.cardInfo > span {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.date {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #7b7b7d;
+    text-wrap: none;
 }
 
 .cardTitle {
@@ -76,19 +99,19 @@ span{
     margin: 0px 0px;
     height: 35%;
     width: 100%;
-	text-align: center;
     font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
     font-size: 25px;
+    color: #474747;
 }
 
 .cardDesc {
-    padding: 0px 70px;
     padding-top: 3px;
 	margin: 0px 0px;
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    color: #7b7b7d;
 }
