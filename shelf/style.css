@@ -29,6 +29,15 @@ span{
     color: #7b7b7d;
 }
 
+br {
+    user-select: none;
+}
+
+::selection {
+    background-color: #C7EFCF;
+    color: black;
+}
+
 .logo {
     position: absolute;
     top: 9vh;
@@ -80,6 +89,7 @@ span{
 }
 
 .cardInfo > span {
+    user-select: auto;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;

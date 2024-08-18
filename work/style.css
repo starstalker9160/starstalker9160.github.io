@@ -29,6 +29,11 @@ span{
     color: #7b7b7d;
 }
 
+::selection {
+    background-color: #C7EFCF;
+    color: black;
+}
+
 .logo {
     position: absolute;
     top: 9vh;

@@ -43,6 +43,10 @@ span{
     color: #7b7b7d;
 }
 
+br {
+    user-select: none;
+}
+
 .logo {
     position: absolute;
     top: 9vh;
