@@ -65,8 +65,8 @@ span{
     border-radius: 5px;
     border: 1px solid #FE5F55;
     text-align: center;
-    height: calc(fit-content + 300px);
     transition: transform 0.05s ease;
+    height: fit-content;
 }
 
 .card:hover {
@@ -77,7 +77,6 @@ span{
 
 .cardTitle {
     display: flex;
-    height: 30%;
     user-select: none;
     justify-content: center;
     align-items: center;
