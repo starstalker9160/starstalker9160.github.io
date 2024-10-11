@@ -1,194 +1,80 @@
-html { background-color: #fff5f8; }
+html { background-color: #fff5f8; user-select: none; }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    min-width: 720px;
+    display: grid;
 }
 
-button {
-    user-select: none;
-    background-color: white;
-    border: 1px solid #FE5F55;
-    border-radius: 5px;
-    color: #E63462;
-    font-family: "IBM Plex Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-button:hover {
-    background-color: #FE5F55;
-    color: white;
-}
-
-
-h1 {
-    user-select: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #474747;
-    font-size: 32px;
-    text-align: center;
-}
-
-span{
-    user-select: none;
-    color: #7b7b7d;
-}
-
-br {
-    user-select: none;
-}
-
-.logo {
-    position: absolute;
-    top: 9vh;
-    left: 9vh;
-    z-index: 9999;
-}
-
-.logo > img {
-    width: 50px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-}
-
-.container {
-    display: flex;
-    height: 100vh;
-}
-
-.main {
-    flex: 0 0 50%;
-    align-content: center;
-    text-align: center;
-}
-
-.textStuff {
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    color: #7b7b7b;
-}
-
-.buttonHolder {
-    padding: 5% 0%;
-    margin: 0px 0px;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-}
-
-.buttonHolder > a {
-    color: #E63462;
-}
-
-.buttonHolder > hr {
-    width: 1px;
-    padding: 0px 0px;
-    margin: 0px 50px;
+hr {
     border: none;
-    background-color: #474747;
+    background-color: #7b7b7b;
+    width: 50%;
+    height: 0.1%;
 }
 
-.articlesButt {
-    margin: 0px 0px;
-    padding: 0px 0px;
-    height: 4vh;
-}
-
-.socials {
-    display: flex;
-    font-size: 30px;
-    justify-content: center;
-}
-
-.socials > hr {
-    width: 1px;
-    margin: 0px 30px;
-    border: none;
-    background-color: #474747;
-}
-
-.socials > a {
-    color: #474747;
-}
-
-.banner {
-    flex: 0 0 30%;
-    overflow: hidden;
-    display: flex;
-    background-image: url(Assets/banner.png);
-    background-repeat: no-repeat;
-    background-size: 79%;
-    width: 100%;
-    height: 100%;
-}
-
-.sidebar {
-    flex: 0 0 20%;
-    overflow: hidden;
-    writing-mode: vertical-rl;
-    text-align: center;
-    align-content: center;
-    user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    font-family: "Tourney", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #474747;
-    font-variation-settings: "wdth" 125;
-    line-height: 1.2;
-    font-size: 100px;
-}
-
-.popup {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    border: 1px solid #FE5F55;
-    border-radius: 10px;
-}
-
-.popup > button {
-    border-radius: 5px;
-}
-
-.popup::backdrop {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.popupTitle {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #11101A;
-    font-size: 28px;
-}
-
-.popupText {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
+span {
+    color: #e63462;
+    font-size: 11vw;
 }
 
 ::selection {
     background-color: #C7EFCF;
-    color: black;
+    color: 1a1a1a;
+}
+
+.titleBar {
+    display: flex;
+    flex-direction: row;
+    padding-left: 3vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff5f8;
+    justify-content: space-between;
+}
+
+.nav {
+    padding-right: 3vw;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    width: 94vw;
+    height: 89vh;
+    border-left: 3vw solid #fff5f8;
+    background: linear-gradient(to right, #e63462 50%, #ffe9f0 50%);
+}
+
+.txtContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.9;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11vw;
+    color: #1a1a1a;
+}
+
+.sides {
+    display: flex;
+}
+
+.sidebar {
+    width: 3.01vw;
+    background-color: #fff5f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    color: #2c2c2c;
+    font-size: 30px;
 }
