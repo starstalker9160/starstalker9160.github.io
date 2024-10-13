@@ -1,32 +1,13 @@
-html { background-color: #fff5f8; }
+html { background-color: #fff5f8; scroll-behavior: smooth; }
 
-h1 {
-    user-select: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #474747;
-    font-size: 32px;
-    text-align: center;
-    margin-top: 9%;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+span {
+    color: #e63462;
+    font-weight: bold;
 }
 
-p {
-    margin-top: 0px;
-    padding-top: 0px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    text-align: center;
-    color: #7b7b7d;
-}
-
-span{
-    user-select: none;
-    color: #7b7b7d;
+a {
+    color: #1a1a1a;
+    text-decoration: none;
 }
 
 ::selection {
@@ -34,64 +15,132 @@ span{
     color: black;
 }
 
-.logo {
-    position: absolute;
-    top: 9vh;
-    left: 9vh;
-    z-index: 9999;
-}
-
-.logo > img {
-    width: 50px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+.path {
     user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 3vh;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    padding: 10px 20%;
-    box-sizing: border-box;
+.desc {
+    margin-top: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+    text-align: center;
+    color: #2c2c2c;
+}
+
+.symbols {
+    user-select: none;
+    color: #2c2c2c;
+}
+
+.titleBar {
+    display: flex;
+    user-select: none;
+    flex-direction: row;
+    padding-left: 3vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background-color: #fff5f8;
+}
+
+#fa {
+    color: #2c2c2c;
+    font-size: 1.2vw;
+}
+
+.carrousel {
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+    padding: 0px 20vw;
+    overflow: auto;
 }
 
 .card {
-    position: relative;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #FE5F55;
-    text-align: center;
-    transition: transform 0.05s ease;
-    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 18vmin;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: translate(2px, -2px);
-    cursor: pointer;
-    box-shadow: -3px 3px 3px #b3b3b3;
+    box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px white;
+}
+
+.cardContent {
+    flex-basis: 14vmin;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffe9f0;
+    border: 3px solid #e63462;
+}
+
+.languages {
+    flex-grow: 1;
+    padding-left: 1vw;
+    display: flex;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #d3d3d3;
+    border-right: 3px solid #474747;
+    border-left: 3px solid #474747;
+    border-bottom: 3px solid #474747;
 }
 
 .cardTitle {
+    flex-basis: calc(100% * (0.20));
+    padding: 0px 1vw;
     display: flex;
-    user-select: none;
-    justify-content: center;
     align-items: center;
-    font-family: "IBM Plex Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 25px;
-    border-bottom: 1px solid #FE5F55;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 2.5vh;
+    background-color: #e63462;
 }
 
 .cardDesc {
-    flex: 1;
-    user-select: none;
-    font-family: "IBM Plex Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 15px;
+    flex-basis: calc(100% * (0.67));
+    padding-left: 1vw;
+    display: flex;
+    font-size: 1.75vh;
+    line-height: 3vh;
+    align-items: center;
+    border-right: 3px solid #e63462;
+}
+
+.cardNav {
+    flex-basis: calc(100% * (0.13));
+    display: flex;
+    flex-direction: column;
+}
+
+.article {
+    flex-basis: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #e63462;
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.parenthesis {
+    font-size: 2vh;
+    
 }
