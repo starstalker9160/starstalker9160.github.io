@@ -18,14 +18,25 @@
     <title>star.stalker9160 | Work - website</title>
 </head>
 <body>
-    <p class="titleBar"><b><a href="/">star.stalker9160</a></b></p>
+    <p class="titleBar"><b><a class="logo" href="/">star.stalker9160</a></b></p>
     <div class="container">
         <h1>windows-fzf</h1>
         <hr>
         <h2>Description</h2>
+        <p>A super fast fuzzy file finder for windows written in C#</p>
+        <h2>How is this different to other fuzzy finders?</h2>
+        <p>Instead of searching for files on disk <span>(which is slow and very un-cool)</span> it instead:</p>
+        <ol>
+            <li>Adds all file paths in working directoy to a SQLite database</li>
+            <li>Loads sections of database into memeory</li>
+            <li>Searces those section for search term fuzzily</li>
+        </ol>
         <p>
-            A super fast fuzzy file finder for windows written in C#. Instead of searching for files on disk it insteads indexes files into a database and
-            then looks through the database
+            which is far superior.
+        </p>
+        <h2>How it works</h2>
+        <p>
+            Firstly we need to create the database using the command `fzf -createdb`
         </p>
     </div>
 </body>

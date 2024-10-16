@@ -5,14 +5,28 @@ body {
     margin: 0px;
 }
 
-span {
+a {
+    color: #e63462;
+    text-decoration: underline;
+}
+
+b {
     color: #e63462;
     font-weight: bold;
 }
 
-a {
-    color: #1a1a1a;
-    text-decoration: none;
+li {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+span {
+    padding: 0px;
+    margin: 0px;
+    color: #474747;
+    font-size: 18px;
+    font-style: italic;
 }
 
 hr {
@@ -27,7 +41,7 @@ h1 {
     font-weight: 500;
     font-style: normal;
     color: #E63462;
-    font-size: 3vw;
+    font-size: 45px;
     margin: 0px;
 }
 
@@ -37,7 +51,7 @@ h2 {
     font-weight: 500;
     font-style: normal;
     color: #fe5f55;
-    font-size: 1.8vw;
+    font-size: 28px;
     margin: 0px;
 }
 
@@ -45,11 +59,11 @@ p {
     color: #1a1a1a;
     padding-left: 2vw;
     font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 1vw;
+    font-size: 22px;
     font-style: normal;
     word-spacing: 1px;
+    line-height: 27px;
 }
 
 ::selection {
@@ -57,8 +71,9 @@ p {
     color: black;
 }
 
-.container {
-    padding: 0px 20vw;
+.logo {
+    color: #1a1a1a;
+    text-decoration: none;
 }
 
 .titleBar {
@@ -70,4 +85,8 @@ p {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     background-color: #fff5f8;
+}
+
+.container {
+    padding: 0px 15vw;
 }
