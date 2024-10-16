@@ -15,6 +15,12 @@ a {
     text-decoration: none;
 }
 
+hr {
+    height: 3px;
+    border: none;
+    background-color: #474747;
+}
+
 h1 {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -25,12 +31,23 @@ h1 {
     margin: 0px;
 }
 
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fe5f55;
+    font-size: 1.8vw;
+    margin: 0px;
+}
+
 p {
     color: #1a1a1a;
+    padding-left: 2vw;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1vw;
     font-style: normal;
     word-spacing: 1px;
 }
@@ -49,6 +66,7 @@ p {
     user-select: none;
     flex-direction: row;
     padding-left: 3vw;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     background-color: #fff5f8;
