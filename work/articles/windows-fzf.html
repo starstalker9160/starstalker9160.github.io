@@ -35,8 +35,22 @@
             which is far superior.
         </p>
         <h2>How it works</h2>
+        <h3>Creating the database</h3>
         <p>
-            Firstly we need to create the database using the command `fzf -createdb`
+            Firstly we need to create the database using the command `<span class="code">fzf -createdb</span>`, this creates an empty SQLite database
+            in the `<span class="code">Documents\windows-fzf</span>` folder.
+            <br>
+        </p>
+        <h3>Updating the database</h3>
+        <p>
+            Now that the database has been created, we need to populate it. We do that by running `<span class="code">fzf -updatedb</span>`. This starts
+            three threads that begin drilling down into all directories and sub directories within the current working directory and adding every file path
+            they encounter to the database.
+            <br><br>
+            If this isn't the first time were updating the database then isntead of drilling down and possibly getting multiple entries it simply looks
+            for the file paths that no longer exist and updates them and then drills down to get any new paths, this avoids multiple entries for the same
+            file path.
+            <br><br>
         </p>
     </div>
 </body>
