@@ -27,8 +27,8 @@
         <h2>How is this different to other fuzzy finders?</h2>
         <p>Instead of searching for files on disk <span>(which is slow and very un-cool)</span> it instead:</p>
         <ol>
-            <li>Adds all file paths in working directoy to a SQLite database</li>
-            <li>Loads sections of database into memeory</li>
+            <li>Adds all file paths in working directoy to a SQLite db</li>
+            <li>Loads sections of db into memeory</li>
             <li>Searces those section for search term fuzzily</li>
         </ol>
         <p>
@@ -37,19 +37,17 @@
         <h2>How it works</h2>
         <h3>Creating the database</h3>
         <p>
-            Firstly we need to create the database using the command `<span class="code">fzf -createdb</span>`, this creates an empty SQLite database
-            in the `<span class="code">Documents\windows-fzf</span>` folder.
+            In order to search in a db we must first create the db using the command `<span class="code">fzf -createdb</span>`, this creates an empty SQLite
+            db in the `<span class="code">Documents\windows-fzf</span>` folder.
             <br>
         </p>
-        <h3>Updating the database</h3>
+        <h3>An empty db is as good as no db</h3>
         <p>
-            Now that the database has been created, we need to populate it. We do that by running `<span class="code">fzf -updatedb</span>`. This starts
+            Now that the db has been created, we need to populate it. We do that by running `<span class="code">fzf -updatedb</span>`. This starts
             three threads that begin drilling down into all directories and sub directories within the current working directory and adding every file path
-            they encounter to the database.
+            they encounter to the db.
             <br><br>
-            If this isn't the first time were updating the database then isntead of drilling down and possibly getting multiple entries it simply looks
-            for the file paths that no longer exist and updates them and then drills down to get any new paths, this avoids multiple entries for the same
-            file path.
+            If this isn't the first time the db is 
             <br><br>
         </p>
     </div>
