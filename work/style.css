@@ -1,8 +1,12 @@
-html { background-color: #fff5f8; scroll-behavior: smooth; }
+html { background-color: #fff5f8; scroll-behavior: smooth; height: 100vh; width: 100vw; overflow-x: hidden;}
 
 body {
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    height: 100%;
+    width: 100%;
+
 }
 
 span {
@@ -23,7 +27,6 @@ a {
 .path {
     user-select: none;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
     color: #1a1a1a;
     font-size: 3vh;
     text-align: center;
@@ -62,16 +65,17 @@ a {
 .carrousel {
     display: flex;
     flex-direction: column;
-    gap: 3vmin;
+    justify-content: space-between;
     padding: 0px 20vw;
-    overflow: auto;
+    margin: 0px;
+    height: 100%;
 }
 
 .card {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 18vmin;
+    height: 18vh;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     transition: all 0.15s ease-in-out;
@@ -122,12 +126,14 @@ a {
     line-height: 3vh;
     align-items: center;
     border-right: 3px solid #e63462;
+    text-overflow: ellipsis;
 }
 
 .cardNav {
     flex-basis: calc(100% * (0.13));
     display: flex;
     flex-direction: column;
+    font-size: large;
 }
 
 .article {
@@ -147,5 +153,4 @@ a {
 
 .parenthesis {
     font-size: 2vh;
-    
 }
