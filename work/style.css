@@ -6,7 +6,6 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-
 }
 
 span {
@@ -14,14 +13,24 @@ span {
     font-weight: bold;
 }
 
-a {
+::selection {
+    background-color: #C7EFCF;
+    color: black;
+}
+
+.logo {
     color: #1a1a1a;
     text-decoration: none;
 }
 
-::selection {
-    background-color: #C7EFCF;
-    color: black;
+.titleBar {
+    display: flex;
+    user-select: none;
+    flex-direction: row;
+    padding-left: 3vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background-color: #fff5f8;
 }
 
 .path {
@@ -47,16 +56,6 @@ a {
     color: #2c2c2c;
 }
 
-.titleBar {
-    display: flex;
-    user-select: none;
-    flex-direction: row;
-    padding-left: 3vw;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    background-color: #fff5f8;
-}
-
 #fa {
     color: #2c2c2c;
     font-size: 1.2vw;
@@ -75,7 +74,6 @@ a {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 18vh;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     transition: all 0.15s ease-in-out;
