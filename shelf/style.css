@@ -1,4 +1,4 @@
-html { background-color: #fff5f8; scroll-behavior: smooth; height: 100vh; width: 100vw; overflow-x: hidden;}
+html { background-color: #fff5f8; scroll-behavior: smooth; height: 100vh; width: 100vw; overflow-x: hidden; }
 
 body {
     box-sizing: border-box;
@@ -19,12 +19,11 @@ body {
 }
 
 .titleBar {
-    display: flex;
     user-select: none;
-    flex-direction: row;
     padding-left: 3vw;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
+    line-height: 1.5;
 }
 
 .path {
@@ -52,70 +51,65 @@ body {
 
 .content {
     margin: 3% 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .card {
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px;
-    border-radius: 10px;
-    transition: all 0.2s ease;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    transition: all 0.15s ease-in-out;
 }
 
 .card:hover {
     cursor: pointer;
-	background-color: #fffbfc;
-    border-radius: 10px;
+    box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px white;
 }
 
-.cardContent {
-	padding: 0px 20px;
-	margin: 0px 0px;
-	width: 100%;
-}
-
-.cardInfo {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: #7b7b7d;
-}
-
-.cardInfo > span {
-    user-select: auto;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.date {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: #7b7b7d;
-    text-wrap: none;
-}
+.cardContent { border: 3px solid #e63462; }
 
 .cardTitle {
-    padding: 0px 0px;
-    margin: 0px 0px;
-    height: 35%;
-    width: 100%;
-    font-family: "Noto Sans", sans-serif;
+    box-sizing: border-box;
+    flex-basis: calc(100% / 3);
+    padding-left: 1vw;
+    display: flex;
+    align-items: center;
+    color: #2c2c2c;
     font-weight: bold;
-    font-style: normal;
-    font-size: 25px;
-    color: #474747;
+    font-size: 2.5vh;
+    background-color: #e63462;
+    border-bottom: 3px solid #e63462;
 }
 
 .cardDesc {
-    padding-top: 3px;
-	margin: 0px 0px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    color: #7b7b7d;
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 0.5vh 1.5vw;
+    font-size: 1.75vh;
+    line-height: 3vh;
+    background-color: #ffe9f0;
 }
+
+.cardInfo {
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 0px 1vw;
+    background-color: #d3d3d3;
+    border-right: 3px solid #474747;
+    border-left: 3px solid #474747;
+    border-bottom: 3px solid #474747;
+}
+
+.cardInfo > span {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.date {
+
+}
+

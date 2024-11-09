@@ -6,8 +6,17 @@ body {
 }
 
 a {
-    color: #e63462;
+    color: #1a1a1a;
     text-decoration: underline;
+    text-decoration-color: #E63462;
+    text-underline-offset: auto;
+    transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+    color: #E63462;
+    text-decoration: underline;
+    text-underline-offset: 0.3vh;
 }
 
 b {
