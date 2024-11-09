@@ -41,12 +41,12 @@ body {
     font-weight: 400;
     font-size: 2.5vh;
     text-align: center;
-    color: #2c2c2c;
+    color: #474747;
 }
 
 .symbols {
     user-select: none;
-    color: #2c2c2c;
+    color: #474747;
 }
 
 .content {
