@@ -16,6 +16,8 @@ body {
     width: 100%;
 }
 
+br { user-select: none; }
+
 a {
     color: #1a1a1a;
     text-decoration: underline;
@@ -43,10 +45,10 @@ li {
 
 pre {
     box-sizing: border-box;
+    width: max-content;
     margin-left: 5%;
-    padding-left: 1%;
+    padding: 0px 2%;
     background-color: #d3d3d3;
-    width: 100%;
     border: 3px solid #474747;
     border-radius: 0.5rem;
 }
@@ -60,6 +62,7 @@ code {
 span {
     padding: 0px;
     margin: 0px;
+    font-family: "NerdFont", monospace;
     color: #474747;
     font-size: 18px;
     font-style: italic;
@@ -113,6 +116,25 @@ p {
     line-height: 3vh;
 }
 
+::-webkit-scrollbar {
+    width: 0.5vw;
+    height: auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 50rem;
+    transition: all 1s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #474747;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff5f8;
+}
+
 ::selection {
     background-color: #C7EFCF;
     color: black;
@@ -130,12 +152,14 @@ p {
 
 .titleBar {
     user-select: none;
+    z-index: 9999;
     padding-left: 3vw;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     line-height: 1.5;
     background-color: #fff5f8;
+    display: block;
 }
 
 #progress-bar {
@@ -145,7 +169,7 @@ p {
     width: 0;
     height: 5px;
     background-color: #4caf50;
-    z-index: 9999;
+    z-index: 9998;
     transition: width 0.25s ease-out;
 }
 
@@ -171,10 +195,4 @@ p {
     font-style: normal;
     color: #1a1a1a;
     background-color: #d3d3d3;
-}
-
-.sideBySide {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }

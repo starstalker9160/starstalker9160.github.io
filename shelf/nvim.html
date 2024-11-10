@@ -25,11 +25,13 @@
         <div class="topStuff">
             <div class="date">10 Nov 2024</div>
             <div class="readTime">15 minute read</div>
-            <div><a class="shelfButt"  href="/shelf/"><i class="fa-solid fa-bars"></i></a></div>
+            <div><a class="shelfButt"  href="/shelf/"><i class="fa-solid fa-list-ul" style="font-size: large;"></i></a></div>
         </div>
         <hr class="differenciator">
         <div class="actualStuff">
             <h1>How I configured neovim to be simple yet powerful</h1>
+            <br>
+            <img src="/Assets/Blogs/nvim-hero.png" draggable="false" style="width: 100%; user-select: none;">
             <p>The full code for my neovim configuration can be found <a href="https://github.com/starstalker9160/nvim">here</a>.</p>
             <h2>Introduction</h2>
             <p>
@@ -50,7 +52,7 @@
     ⎥   ⎥   ⎥-> <i class="fa-solid fa-code"></i> keymaps.lua
     ⎥   ⎥<b style="color: #1a1a1a;"><i class="fa-regular fa-folder-open"></i>plugins</b>
     ⎥      ⎥-> <i class="fa-solid fa-code"></i> init.lua
-    ⎥      ⎥-> <i class="fa-solid fa-code"></i> alpha.lua
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> alpha-nvim.lua
     ⎥      ⎥-> <i class="fa-solid fa-code"></i> colourscheme.lua
     ⎥      ⎥-> <i class="fa-solid fa-code"></i> nvim-surround.lua
     ⎥      ⎥-> <i class="fa-solid fa-code"></i> nvim-tree.lua
@@ -86,15 +88,45 @@
             <h2>Primary init.lua file</h2>
             <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/init.lua"></code></pre>
             <p>
-                Over here I call the <span class="code">/lua/core/init.lua</span> file which then calls the <span class="code">/lua/core/options.lua</span>
-                & the <span class="code">/lua/core/keymaps.lua</span> file. We also initiate the <span class="code">Lazy.nvim</span> plugin manager.
+                Over here I call the <span class="code">/lua/core/init.lua</span> file and also initiate the <span class="code">Lazy.nvim</span> plugin manager.
             </p>
-            <h2>Options and Keymaps</h2>
+            <h2>Core</h2>
+            <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/lua/core/init.lua"></code></pre>
+            <p>
+                In here I call the options and keymaps files which set some vim options and some default vim keybinds respectively.
+            </p>
             <h3>Options.lua</h3>
-            <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/lua/core/options.lua"></code></pre>
+            <p>
+                In this file I set vim options such as tab stop to 4 <span>(the only acceptable tab length)</span>, showing relative line numbers for
+                navigation, and some search and split settings.
+            </p>
             <h3>Keymaps.lua</h3>
-            <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/lua/core/keymaps.lua"></code></pre>
+            <p>Here I'm setting keymaps for the split view and some integer manipulation.</p>
+            <h2>Plugins</h2>
+            <span>(finally, the fun part :D)</span>
+            <ul>
+                <li>
+                    <h3>alpha-nvim</h3><p><a href="https://github.com/goolord/alpha-nvim">This</a> is the greeter I use. The screen that shows up when I type
+                    <span class="code">nvim</span> into the terminal. I have some pretty basic things here like to open up the
+                    <a href="#find-file">find file menu</a>, to toggle the <a href="#file-explorer">file explorer</a> and a new file option</p>
+                </li>
+                <li>
+                    <h3>colourscheme</h3><p>I'm using the <a href="https://github.com/maxmx03/fluoromachine.nvim">fluoromachine.nvim</a> colourscheme coz my favourite colour is purple🤩.</p>
+                </li>
+                <li>
+                    <h3>nvim-surround</h3><p>Simple little <a href="https://github.com/kylechui/nvim-surround">plugin</a> to surround text with other stuff</p>
+                </li>
+                <li>
+                    <h3>nvim-tree</h3><p id="file-explorer">Toggleable <a href="https://github.com/nvim-tree/nvim-tree.lua">file explorer</a> like the one in VSCode</p>
+                </li>
+                <li>
+                    <h3>telescope.nvim</h3><p id="find-file">Awesome <a href="https://github.com/nvim-telescope/telescope.nvim">plugin</a> allowing you to fuzzily find files in the current directory </p>
+                </li>
+            </ul>
         </div>
     </div>
+    <footer>
+        
+    </footer>
 </body>
 </html>
