@@ -15,14 +15,16 @@
 
     <link rel="icon" href="/Assets/star_stalker.jpg" type="image/x-n">
     <link rel="stylesheet" href="blogStyle.css">
+    <script src="/shelf/blogScript.js"></script>
     <title>star.stalker9160 | nvim</title>
 </head>
 <body>
+    <div id="progress-bar"></div>
     <p class="titleBar"><b><a class="logo" href="/">star.stalker9160</a></b></p>
     <div class="container">
         <div class="topStuff">
-            <div class="date">31 June 2025</div>
-            <div class="readTime">? minute read</div>
+            <div class="date">10 Nov 2024</div>
+            <div class="readTime">15 minute read</div>
             <div><a class="shelfButt"  href="/shelf/"><i class="fa-solid fa-bars"></i></a></div>
         </div>
         <hr class="differenciator">
@@ -33,8 +35,65 @@
             <p>
                 Setting up nvim can be truly overwhelming due to the sheer number of plugins and the seemingly limitless customization options.
                 I wanted a setup that's relatively straightforward but still stacks up against an IDE
-                <span>(<b>I</b>ntegrated <b>D</b>evelopment <b>E</b>nvironment)</span> like <a href="https://www.jetbrains.com/rider/">JetBrains Rider</a>.
+                <span>(<b style="color: #2c2c2c;">I</b>ntegrated <b style="color: #2c2c2c;">D</b>evelopment <b style="color: #2c2c2c;">E</b>nvironment)
+                </span> like <a href="https://www.jetbrains.com/rider/">JetBrains Rider</a>.
             </p>
+            <h2>File Structure</h2>
+            <pre><code>
+<b style="color: #1a1a1a;"><i class="fa-regular fa-folder-open"></i>.config/nvim</b>
+    ⎥<b style="color: #1a1a1a;"><i class="fa-regular fa-folder-open"></i>lua</b>
+    ⎥   ⎥<b style="color: #1a1a1a;"><i class="fa-regular fa-folder-open"></i>lazy</b>
+    ⎥   ⎥   ⎥-> <i class="fa-solid fa-code"></i> lazy.lua
+    ⎥   ⎥<b style="color: #1a1a1a;"><i class="fa-regular fa-folder-open"></i>core</b>
+    ⎥   ⎥   ⎥-> <i class="fa-solid fa-code"></i> init.lua
+    ⎥   ⎥   ⎥-> <i class="fa-solid fa-code"></i> options.lua
+    ⎥   ⎥   ⎥-> <i class="fa-solid fa-code"></i> keymaps.lua
+    ⎥   ⎥<b style="color: #1a1a1a;"><i class="fa-regular fa-folder-open"></i>plugins</b>
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> init.lua
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> alpha.lua
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> colourscheme.lua
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> nvim-surround.lua
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> nvim-tree.lua
+    ⎥      ⎥-> <i class="fa-solid fa-code"></i> telescope.lua
+    ⎥-> <i class="fa-solid fa-code"></i> init.lua
+            </code></pre>
+            <h3>Explaination</h3>
+            <p>
+                <ul>
+                    <li>
+                        <span class="code">init.lua</span> - This is the file neovim calls upon being launched, this contains a bunch of
+                        <span class="code">require()</span> statements calling each induvidual componenet
+                    </li>
+                    <br>
+                    <li>
+                        <span class="code">/lua/lazy/lazy.lua</span> - Bootstrapping the <span class="code">Lazy.nvim</span> plugin manager
+                    </li>
+                    <br>
+                    <li>
+                        <span class="code">/lua/core/</span> - This folder contains non plugin related configs like:
+                        <ul>
+                            <li><span class="code">init.lua</span> - File called by primary init.lua</li>
+                            <li><span class="code">options.lua</span> - Contains some regular vim options</li>
+                            <li><span class="code">keymaps.lua</span> - Contains some regular vim operations to certain keybinds</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        <span class="code">/lua/plugins/</span> - This folder contains the configs for induvidual plugins
+                    </li>
+                </ul>
+            </p>
+            <h2>Primary init.lua file</h2>
+            <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/init.lua"></code></pre>
+            <p>
+                Over here I call the <span class="code">/lua/core/init.lua</span> file which then calls the <span class="code">/lua/core/options.lua</span>
+                & the <span class="code">/lua/core/keymaps.lua</span> file. We also initiate the <span class="code">Lazy.nvim</span> plugin manager.
+            </p>
+            <h2>Options and Keymaps</h2>
+            <h3>Options.lua</h3>
+            <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/lua/core/options.lua"></code></pre>
+            <h3>Keymaps.lua</h3>
+            <pre><code data-url="https://raw.githubusercontent.com/starstalker9160/nvim/refs/heads/main/lua/core/keymaps.lua"></code></pre>
         </div>
     </div>
 </body>
