@@ -1,9 +1,22 @@
 html { background-color: #fff5f8; scroll-behavior: smooth; }
 
+@font-face {
+    font-family: 'NerdFont';
+    src: url('/Assets/JetBrainsMonoNerdFontMono-Regular.woff2') format('woff2'),
+         url('/Assets/JetBrainsMonoNerdFontMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    height: 100%;
+    width: 100%;
 }
+
+br { user-select: none; }
 
 a {
     color: #1a1a1a;
@@ -86,6 +99,25 @@ p {
     line-height: 27px;
 }
 
+::-webkit-scrollbar {
+    width: 0.5vw;
+    height: auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 50rem;
+    transition: all 1s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #474747;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #00000028;
+}
+
 ::selection {
     background-color: #C7EFCF;
     color: black;
@@ -96,15 +128,21 @@ p {
     text-decoration: none;
 }
 
+.logo:hover {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
 .titleBar {
-    display: flex;
     user-select: none;
-    flex-direction: row;
+    z-index: 9999;
     padding-left: 3vw;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+    line-height: 1.5;
     background-color: #fff5f8;
+    display: block;
 }
 
 .container {
