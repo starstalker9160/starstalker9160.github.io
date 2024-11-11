@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const codeElements = document.querySelectorAll('code[data-url]');
     codeElements.forEach(function (codeElement) {
-        const fileUrl = codeElement.getAttribute('data-url');
-        fetch(fileUrl)
+        fetch(codeElement.getAttribute('data-url'))
             .then(response => {
                 if (!response.ok) { throw new Error('File not found'); }
                 return response.text();
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-
     document.addEventListener('scroll', function() {
         const docHeight = document.documentElement.scrollHeight;
         const winHeight = window.innerHeight;
@@ -25,5 +23,4 @@ document.addEventListener('DOMContentLoaded', function () {
         const progressBar = document.getElementById('progress-bar');
         progressBar.style.width = scrollPercent + '%';
     });
-    
 });

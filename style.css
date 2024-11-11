@@ -15,7 +15,7 @@ a {
 }
 
 span {
-    color: #e63462;
+    color: #E63462;
     font-size: 11vw;
 }
 
@@ -56,7 +56,7 @@ span {
     border-right: 3vw solid #fff5f8;
     border-left: 3vw solid #fff5f8;
     border-bottom: 3vw solid #fff5f8;
-    background: linear-gradient(to right, #e63462 50%, #ffe9f0 50%);
+    background: linear-gradient(to right, #E63462 50%, #ffe9f0 50%);
 }
 
 .sidebar {

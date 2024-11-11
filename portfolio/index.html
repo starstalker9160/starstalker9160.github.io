@@ -6,30 +6,33 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+
+    <link rel="stylesheet" href="/Assets/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/css/fontawesome.min.css">
 
     <link rel="icon" href="/Assets/star_stalker.jpg" type="image/x-n">
     <link rel="stylesheet" href="/portfolio/style.css">
-    <title>star.stalker9160 | portfolio</title>
+    <script>window.redirect = function(page) { window.location.href = page; };</script>
+
+    <title>star.stalker9160 | Portfolio</title>
 </head>
 <body>
-    <a class="logo" href="/"><img src="/Assets/star_stalker__Circular.png" draggable="false"></a>
-    <div class="portfolioText"><span><b>/</b></span><b>portfolio</b><span><b>.</b></span></div>
-    <div class="subtext">a display of stuff i did</div>
+    <p class="titleBar"><b><a class="logo" href="/">star.stalker9160</a></b></p>
+    <h1 class="path"><b><span class="symbols">/</span>portfolio<span class="symbols">.</span></b></h1>
+    <p class="desc">collection of stuff I did</p>
     <div class="content">
-        <div class="block">
-            <h1><b>I write,<br>Occasionally</b></h1><br>
-            <p>About game development,<br>and other stuff.</p>
-            <br><br>
-            <a href="/shelf/"><button class="articlesButt">SHELF</button></a>
+        <div class="container">
+            <p class="containerTitle">I write,<br>Occasionally</p>
+            <p class="containerDesc">About game dev,<br>& cool projects I'm working on</p>
+            <pre><button class="shelf" onclick="redirect('/shelf')">     SHELF   <i class="fa-solid fa-arrow-right-long"></i>  </button></pre>
         </div>
-        <hr>
-        <div class="block">
-            <h1><b>Some of my<br>other stuff</b></h1><br>
-            <p>Open source projects,<br>and cool stuff</p>
-            <br><br>
-            <a href="/work/"><button class="articlesButt">SEE MY WORK</button></a>
+        <div class="line"></div>
+        <div class="container">
+            <p class="containerTitle">I build<br>cool stuff</p>
+            <p class="containerDesc">About game dev,<br>& cool projects I'm working on</p>
+            <pre><button class="shelf" onclick="redirect('/work')">  SEE MY WORK  <i class="fa-solid fa-arrow-right-long"></i></button></pre>
         </div>
     </div>
 </body>
