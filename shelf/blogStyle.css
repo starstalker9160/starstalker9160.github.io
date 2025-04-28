@@ -164,13 +164,14 @@ p {
 
 #progress-bar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 0;
+    top: 0px;
+    left: 0px;
+    width: 0%;
     height: 5px;
     background-color: #4caf50;
     z-index: 9998;
     transition: width 0.25s ease-out;
+    pointer-events: none;
 }
 
 .container {
