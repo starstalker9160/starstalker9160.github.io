@@ -14,10 +14,7 @@ a {
     text-decoration: none;
 }
 
-span {
-    color: #E63462;
-    font-size: 11vw;
-}
+span { color: #E63462; }
 
 ::selection {
     background-color: #C7EFCF;
@@ -38,6 +35,7 @@ nav {
 .main {
     flex-grow: 1;
     box-sizing: border-box;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,31 +54,35 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff5f8;
 }
 
 @media (max-width: 1000px) {
     .main {
-        width: 100%;
+        font-size: 25vw;
         background: linear-gradient(to bottom, #E63462 50%, #ffe9f0 50%);
     }
+
+    span { font-size: 25vw; }
 
     .sidebar {
         width: 100%;
         right: 50%;
         bottom: 0px;
         transform: translate(50%, 0%);
-        flex-direction: row;
         gap: 1rem;
-        background-color: #fff5f8;
+        flex-direction: row;
     }
 }
 
 @media (min-width: 1001px) {
     .main {
         height: 100%;
-        width: 100%;
+        font-size: 11vw;
         background: linear-gradient(to right, #E63462 50%, #ffe9f0 50%);
     }
+
+    span { font-size: 11vw; }
     
     .sidebar {
         height: 100%;
@@ -89,7 +91,6 @@ nav {
         transform: translate(0%, -50%);
         width: 3vw;
         flex-direction: column;
-        background-color: #fff5f8;
     }
 }
 

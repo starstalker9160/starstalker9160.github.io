@@ -49,12 +49,10 @@ body {
     color: #474747;
 }
 
-.content {
-    margin: 3% 22%;
+.carrousel {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
 }
 
 .card {
@@ -108,4 +106,19 @@ body {
 
 .cardInfo > span {
     font-family: "IBM Plex Mono", monospace;
+}
+
+@media (max-width: 1000px) {
+    .carrousel {
+        margin: 1% 10%;
+        gap: 2rem;
+    }
+
+}
+
+@media (min-width: 1001px) {
+    .carrousel {
+        margin: 1% 20%;
+        height: 100%;
+    }
 }

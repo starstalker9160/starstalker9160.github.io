@@ -93,6 +93,16 @@ span {
     background-color: #E63462;
 }
 
+.cardDesc {
+    flex-basis: calc(100% * (0.67));
+    padding-left: 1vw;
+    display: flex;
+    font-size: 1.75vh;
+    line-height: 3vh;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+
 .cardContent {
     flex-basis: 14vmin;
     display: flex;
@@ -135,31 +145,13 @@ span {
         gap: 2rem;
     }
 
-    .cardContent {
-        flex-direction: column;
-    }
+    .cardContent { flex-direction: column; }
 
-    .cardDesc {
-        flex-basis: calc(100% * (0.67));
-        padding-left: 1vw;
-        display: flex;
-        font-size: 1.75vh;
-        line-height: 3vh;
-        align-items: center;
-        border-bottom: 3px solid #E63462;
-        text-overflow: ellipsis;
-    }
+    .cardDesc { border-bottom: 3px solid #E63462; }
 
-    .cardNav {
-        flex-basis: calc(100% * (0.13));
-        display: flex;
-        font-size: large;
-        flex-direction: row;
-    }
+    .cardNav { flex-direction: row; }
 
-    .article {
-        border-right: 3px solid #E63462;
-    }
+    .article { border-right: 3px solid #E63462; }
 }
 
 @media (min-width: 1001px) {
@@ -168,20 +160,9 @@ span {
         height: 100%;
     }
 
-    .cardContent {
-        flex-direction: row;
-    }
+    .cardContent { flex-direction: row; }
 
-    .cardDesc {
-        flex-basis: calc(100% * (0.67));
-        padding-left: 1vw;
-        display: flex;
-        font-size: 1.75vh;
-        line-height: 3vh;
-        align-items: center;
-        border-right: 3px solid #E63462;
-        text-overflow: ellipsis;
-    }
+    .cardDesc { border-right: 3px solid #E63462; }
 
     .cardNav { flex-direction: column; }
 
