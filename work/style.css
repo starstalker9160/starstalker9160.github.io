@@ -71,8 +71,6 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1% 20%;
-    height: 100%;
 }
 
 .card {
@@ -84,14 +82,20 @@ span {
     transition: all 0.15s ease-in-out;
 }
 
-.card:hover {
-    box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px white;
+.cardTitle {
+    flex-basis: calc(100% * (0.20));
+    padding: 0px 1vw;
+    display: flex;
+    align-items: center;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 2.5vh;
+    background-color: #E63462;
 }
 
 .cardContent {
     flex-basis: 14vmin;
     display: flex;
-    flex-direction: row;
     background-color: #ffe9f0;
     border: 3px solid #E63462;
 }
@@ -110,41 +114,78 @@ span {
     border-bottom: 3px solid #474747;
 }
 
-.cardTitle {
-    flex-basis: calc(100% * (0.20));
-    padding: 0px 1vw;
-    display: flex;
-    align-items: center;
-    color: #1a1a1a;
-    font-weight: bold;
-    font-size: 2.5vh;
-    background-color: #E63462;
-}
-
-.cardDesc {
-    flex-basis: calc(100% * (0.67));
-    padding-left: 1vw;
-    display: flex;
-    font-size: 1.75vh;
-    line-height: 3vh;
-    align-items: center;
-    border-right: 3px solid #E63462;
-    text-overflow: ellipsis;
-}
-
-.cardNav {
-    flex-basis: calc(100% * (0.13));
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-}
-
 .article {
     flex-basis: calc(100% / 2);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid #E63462;
+}
+
+.cardNav {
+    flex-basis: calc(100% * (0.13));
+    display: flex;
+    font-size: large;
+}
+
+.card:hover { box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px white; }
+
+@media (max-width: 1000px) {
+    .carrousel {
+        margin: 1% 10%;
+        gap: 2rem;
+    }
+
+    .cardContent {
+        flex-direction: column;
+    }
+
+    .cardDesc {
+        flex-basis: calc(100% * (0.67));
+        padding-left: 1vw;
+        display: flex;
+        font-size: 1.75vh;
+        line-height: 3vh;
+        align-items: center;
+        border-bottom: 3px solid #E63462;
+        text-overflow: ellipsis;
+    }
+
+    .cardNav {
+        flex-basis: calc(100% * (0.13));
+        display: flex;
+        font-size: large;
+        flex-direction: row;
+    }
+
+    .article {
+        border-right: 3px solid #E63462;
+    }
+}
+
+@media (min-width: 1001px) {
+    .carrousel {
+        margin: 1% 20%;
+        height: 100%;
+    }
+
+    .cardContent {
+        flex-direction: row;
+    }
+
+    .cardDesc {
+        flex-basis: calc(100% * (0.67));
+        padding-left: 1vw;
+        display: flex;
+        font-size: 1.75vh;
+        line-height: 3vh;
+        align-items: center;
+        border-right: 3px solid #E63462;
+        text-overflow: ellipsis;
+    }
+
+    .cardNav { flex-direction: column; }
+
+    .article { border-bottom: 3px solid #E63462; }
 }
 
 .github {
