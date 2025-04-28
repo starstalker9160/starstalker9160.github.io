@@ -41,31 +41,58 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
     line-height: 0.9;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 11vw;
     color: #1a1a1a;
-    border-right: 3vw solid #fff5f8;
-    border-left: 3vw solid #fff5f8;
-    border-bottom: 3vw solid #fff5f8;
-    background: linear-gradient(to right, #E63462 50%, #ffe9f0 50%);
+    border: 3vw solid #fff5f8;
+    border-top: none;
 }
 
 .sidebar {
     position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translate(0%, -50%);
-    width: 3vw;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 1000px) {
+    .main {
+        width: 100%;
+        background: linear-gradient(to bottom, #E63462 50%, #ffe9f0 50%);
+    }
+
+    .sidebar {
+        width: 100%;
+        right: 50%;
+        bottom: 0px;
+        transform: translate(50%, 0%);
+        flex-direction: row;
+        gap: 1rem;
+        background-color: #fff5f8;
+    }
+}
+
+@media (min-width: 1001px) {
+    .main {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, #E63462 50%, #ffe9f0 50%);
+    }
+    
+    .sidebar {
+        height: 100%;
+        right: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        width: 3vw;
+        flex-direction: column;
+        background-color: #fff5f8;
+    }
+}
+
 
 .socials {
     color: #2c2c2c;
