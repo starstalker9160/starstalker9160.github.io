@@ -29,14 +29,31 @@ span {
 }
 
 .titleBar {
-    display: flex;
     user-select: none;
+    display: flex;
     flex-direction: row;
     padding-left: 3vw;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     line-height: 1.5;
     background-color: #fff5f8;
+}
+
+nav {
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 3vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff5f8;
+}
+
+.nav {
+    text-decoration: none;
+    color: #1a1a1a;
 }
 
 .path {
