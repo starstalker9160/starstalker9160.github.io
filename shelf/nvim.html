@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/shelf/blogStyle.css">
 
     <script src="/shelf/progressBar.min.js"></script>
-    <script src="/cursor.min.js"></script>
+    <script src="/common.min.js"></script>
     <title>star.stalker9160 | Shelf - nvim</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
         <div class="topStuff">
             <div class="date">10 Nov 2024</div>
             <div class="readTime">15 minute read</div>
-            <div><a class="shelfButt"  href="/shelf/"><i class="fa-solid fa-list-ul" style="font-size: large;"></i></a></div>
+            <div><a class="shelfButt" href="/shelf/" data-tooltip="back to shelf"><i class="fa-solid fa-list-ul" style="font-size: large;"></i></a></div>
         </div>
         <hr class="differenciator">
         <div class="actualStuff">
@@ -41,7 +41,7 @@
                 Setting up nvim can be truly overwhelming due to the sheer number of plugins and the seemingly limitless customization options.
                 I wanted a setup that's relatively straightforward but still stacks up against an IDE
                 <span>(<b style="color: #2c2c2c;">I</b>ntegrated <b style="color: #2c2c2c;">D</b>evelopment <b style="color: #2c2c2c;">E</b>nvironment)
-                </span> like <a href="https://www.jetbrains.com/rider/">JetBrains Rider</a>.
+                </span> like <a href="https://www.jetbrains.com/rider/" data-tooltip="please buy me this">JetBrains Rider</a>.
             </p>
             <h2>File Structure</h2>
             <pre><code>
@@ -109,21 +109,21 @@
             <span>(finally, the fun part :D)</span>
             <ul>
                 <li>
-                    <h3>alpha-nvim</h3><p><a href="https://github.com/goolord/alpha-nvim">This</a> is the greeter I use. The screen that shows up when I type
+                    <h3>alpha-nvim</h3><p><a href="https://github.com/goolord/alpha-nvim" data-tooltip="view on github">This</a> is the greeter I use. The screen that shows up when I type
                     <span class="code">nvim</span> into the terminal. I have some pretty basic things here like to open up the
                     <a href="#find-file">find file menu</a>, to toggle the <a href="#file-explorer">file explorer</a> and a new file option</p>
                 </li>
                 <li>
-                    <h3>colourscheme</h3><p>I'm using the <a href="https://github.com/maxmx03/fluoromachine.nvim">fluoromachine.nvim</a> colourscheme coz my favourite colour is purple🤩</p>
+                    <h3>colourscheme</h3><p>I'm using the <a href="https://github.com/maxmx03/fluoromachine.nvim" data-tooltip="view on github">fluoromachine.nvim</a> colourscheme coz my favourite colour is purple🤩</p>
                 </li>
                 <li>
-                    <h3>nvim-surround</h3><p>Simple little <a href="https://github.com/kylechui/nvim-surround">plugin</a> to surround text with other stuff</p>
+                    <h3>nvim-surround</h3><p>Simple little <a href="https://github.com/kylechui/nvim-surround" data-tooltip="view on github">plugin</a> to surround text with other stuff</p>
                 </li>
                 <li>
-                    <h3>nvim-tree</h3><p id="file-explorer">Toggleable <a href="https://github.com/nvim-tree/nvim-tree.lua">file explorer</a> like the one in VSCode</p>
+                    <h3>nvim-tree</h3><p id="file-explorer">Toggleable <a href="https://github.com/nvim-tree/nvim-tree.lua" data-tooltip="view on github">file explorer</a> like the one in VSCode</p>
                 </li>
                 <li>
-                    <h3>telescope.nvim</h3><p id="find-file">Awesome <a href="https://github.com/nvim-telescope/telescope.nvim">plugin</a> allowing you to fuzzily find files in the current directory </p>
+                    <h3>telescope.nvim</h3><p id="find-file">Awesome <a href="https://github.com/nvim-telescope/telescope.nvim" data-tooltip="view on github">plugin</a> allowing you to fuzzily find files in the current directory </p>
                 </li>
             </ul>
         </div>
