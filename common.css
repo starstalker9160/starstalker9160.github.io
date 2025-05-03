@@ -38,3 +38,21 @@ span {
     line-height: 1.5;
     background-color: #fff5f8;
 }
+
+.path {
+    user-select: none;
+    font-family: "Roboto", sans-serif;
+    color: #1a1a1a;
+    font-size: 3vh;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.desc {
+    margin-top: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+    text-align: center;
+    color: #474747;
+}

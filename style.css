@@ -32,12 +32,6 @@ nav {
     background-color: #fff5f8;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-}
-
 .main {
     flex-grow: 1;
     box-sizing: border-box;
