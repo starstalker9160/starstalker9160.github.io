@@ -94,8 +94,25 @@ nav {
     }
 }
 
-
 .socials {
     color: #2c2c2c;
     font-size: 30px;
+}
+
+.circle {
+    box-sizing: border-box;
+    --circle-size: 40px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: 1px solid #1a1a1a;
+    border-radius: 100%;
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+    z-index: 1000000;
+}
+
+@media (max-width: 1000px) {
+    .circle { display: none; }
 }

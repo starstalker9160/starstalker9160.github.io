@@ -1,11 +1,6 @@
-html { background-color: #fff5f8; margin: 0px; padding: 0px; scroll-behavior: smooth; overflow: hidden; }
+html { margin: 0px; padding: 0px; overflow: hidden; }
 
 body {
-    /* box-sizing: border-box; */
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
@@ -42,42 +37,6 @@ button:hover::before {
 button:hover {
     color: #ffffff;
     cursor: pointer;
-}
-
-::selection {
-    background-color: #C7EFCF;
-    color: black;
-}
-
-.logo {
-    color: #1a1a1a;
-    text-decoration: none;
-}
-
-.titleBar {
-    user-select: none;
-    padding-left: 3vw;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    line-height: 1.5;
-}
-
-.path {
-    user-select: none;
-    font-family: "Roboto", sans-serif;
-    color: #1a1a1a;
-    font-size: 3vh;
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-.desc {
-    margin-top: 0px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 2.5vh;
-    text-align: center;
-    color: #474747;
 }
 
 .symbols {
