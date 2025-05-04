@@ -15,7 +15,7 @@
 
 .card:hover {
     cursor: pointer;
-    box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px white;
+    box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px #ffffff;
 }
 
 .cardContent { border: 3px solid #E63462; }

@@ -73,7 +73,7 @@
     font-size: large;
 }
 
-.card:hover { box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px white; }
+.card:hover { box-shadow: 12px 12px 12px #0000003b, -10px -10px 10px #ffffff; }
 
 @media (max-width: 1000px) {
     .carrousel {
