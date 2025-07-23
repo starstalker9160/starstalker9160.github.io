@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #11101A;
-    background-image: url("/Assets/starstalkerstuiods_Splashscreen.png");
+    background-image: url("./Assets/starstalkerstuiods_Splashscreen.png");
     background-size: cover;
     background-position: center;
     z-index: 1000;
