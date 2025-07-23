@@ -7,19 +7,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap">
 
-    <link rel="stylesheet" href="/Assets/css/all.min.css">
-    <link rel="stylesheet" href="/Assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./Assets/css/all.min.css">
+    <link rel="stylesheet" href="./Assets/css/fontawesome.min.css">
 
-    <link rel="icon" href="/Assets/star_stalker__Circular.png" type="image/x-n">
+    <link rel="icon" href="./Assets/star_stalker__Circular.png" type="image/x-n">
     <link rel="stylesheet" href="./style.css">
     <script src="./splashScreen.min.js"></script>
-    <title>starstalkerstudios | Home</title>
+    <script src="./script.js" defer></script>
+    <title>starstalker.studios</title>
 </head>
 <body>
     <div id="splashScreen"><div class="loadingTxt">Loading...</div></div>
-    <div id="main-content">
-        <nav>penis</nav>
-    </div>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo" class="nav-item"><a>logo</i></a></div>
+        <div id="nav-mobile">
+            <div id="nav-link" class="nav-item">
+                <a>ABOUT</a>
+                <a>GAMES</a>
+            </div>
+            <div id="nav-social" class="nav-item">
+                <a href="https://www.instagram.com/starstalker.studios/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div id="nav-contact" class="nav-item">
+                <a href="#">GET IN TOUCH</a>
+            </div>
+        </div>
+        <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+            <span>Menu</span>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <main>
+        <article data-index="0" data-status="active">
+            <div class="article-img article-item"></div>
+            <div class="article-desc article-item"><p>
+                Description for 1.
+            </p></div>
+            <div class="article-title article-item"><h2>Title 1</h2><img class="plus" src="./Assets/plus.svg" draggable="false"></div>
+            <div class="article-nav article-item">
+                <button class="article-nav-btn" type="button" onclick="handleLeftClick()"><span class="arrow-text"> <- </span></button>
+                <button class="article-nav-btn" type="button" onclick="handleRightClick()"><span class="arrow-text"> -> </span></button>
+            </div>
+        </article>
+        <article data-index="1" data-status="inactive">
+            <div class="article-img article-item"></div>
+            <div class="article-desc article-item"><p>
+                Description for 2.
+            </p></div>
+            <div class="article-title article-item"><h2>Title 2</h2><img class="plus" src="./Assets/plus.svg" draggable="false"></div>
+            <div class="article-nav article-item">
+                <button class="article-nav-btn" type="button" onclick="handleLeftClick()"><span class="arrow-text"> <- </span></button>
+                <button class="article-nav-btn" type="button" onclick="handleRightClick()"><span class="arrow-text"> -> </span></button>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
