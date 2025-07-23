@@ -1,2 +1,5 @@
-tmp
-certs
+tmp/
+certs/
+apis/
+f1/
+.htaccess
