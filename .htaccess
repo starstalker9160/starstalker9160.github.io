@@ -8,7 +8,6 @@ RewriteRule ^(.*)$ $1.html
 
 
 # git
-# Redirect /git/<repo> or /git/<repo>.git to GitHub
 RewriteCond %{REQUEST_URI} ^/git/(.+)$
 RewriteCond %1 !\.git$ [NC]
 RewriteRule ^git/(.+)$ https://github.com/starstalker9160/%1.git [R=302,L]
