@@ -1,8 +1,20 @@
-# url rewriting
 RewriteEngine on
+
+
+# url rewriting
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
+
+
+# git
+# Redirect /git/<repo> or /git/<repo>.git to GitHub
+RewriteCond %{REQUEST_URI} ^/git/(.+)$
+RewriteCond %1 !\.git$ [NC]
+RewriteRule ^git/(.+)$ https://github.com/starstalker9160/%1.git [R=302,L]
+
+RewriteRule ^git/(.+\.git)$ https://github.com/starstalker9160/$1 [R=302,L]
+
 
 # 404 Error
 ErrorDocument 404 /404.html
