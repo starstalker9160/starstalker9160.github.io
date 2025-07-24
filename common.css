@@ -103,6 +103,12 @@ nav {
     left: calc(var(--circle-size) / 2 * -1);
     pointer-events: none;
     z-index: 1000000;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+body:hover > .circle {
+    opacity: 1;
 }
 
 @media (max-width: 1000px) {
