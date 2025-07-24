@@ -1,11 +1,11 @@
-/* -- Carousel Navigation -- */
-let activeIndex = 0;
+let i = 0;
 const slides = document.getElementsByTagName("article");
-const handleLeftClick = () => {
-    const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
 
-    const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-    nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+const handleLeftClick = () => {
+    const nxt = i - 1 >= 0 ? i - 1 : slides.length - 1;
+
+    const currentSlide = document.querySelector(`[data-index="${i}"]`),
+    nextSlide = document.querySelector(`[data-index="${nxt}"]`);
 
     currentSlide.dataset.status = "after";
 
@@ -13,15 +13,15 @@ const handleLeftClick = () => {
 
     setTimeout(() => {
         nextSlide.dataset.status = "active";
-        activeIndex = nextIndex;
+        i = nxt;
     });
 }
 
 const handleRightClick = () => {
-    const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
+    const nxt = i + 1 <= slides.length - 1 ? i + 1 : 0;
 
-    const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
-    nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
+    const currentSlide = document.querySelector(`[data-index="${i}"]`),
+    nextSlide = document.querySelector(`[data-index="${nxt}"]`);
 
     currentSlide.dataset.status = "before";
 
@@ -29,20 +29,6 @@ const handleRightClick = () => {
 
     setTimeout(() => {
         nextSlide.dataset.status = "active";
-        activeIndex = nextIndex;
+        i = nxt;
     });
 }
-
-/* -- Mobile Nav Toggle -- */
-const nav = document.querySelector("nav");
-const handleNavToggle = () => {  
-    nav.dataset.transitionable = "true";
-
-    nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
-}
-
-window.matchMedia("(max-width: 800px)").onchange = e => {
-    nav.dataset.transitionable = "false";
-
-    nav.dataset.toggled = "false";
-};
