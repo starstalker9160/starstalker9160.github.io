@@ -11,7 +11,7 @@ button {
     font-size: 2vh;
     position: relative;
     overflow: hidden;
-    border: 3px solid #FE5F55;
+    border: 3px solid #f36864;
     background: none;
     padding: 10px 20px;
     user-select: none;
@@ -25,7 +25,7 @@ button::before {
     left: 0;
     width: 0;
     height: 100%;
-    background: #FE5F55;
+    background: #f36864;
     z-index: -5;
     transition: width 0.3s ease-in-out;
 }
@@ -62,7 +62,7 @@ button:hover {
 
 .line {
     display: block;
-    background-color: #FE5F55;
+    background-color: #f36864;
 }
 
 @media (max-width: 1000px) {
