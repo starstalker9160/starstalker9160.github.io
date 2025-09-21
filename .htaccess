@@ -6,7 +6,12 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
 
+# redirect /f1 to f1.[current domain] if not already on f1 subdomain
+RewriteCond %{HTTP_HOST} !^f1\. [NC]
 RewriteRule ^f1/?(.*)$ https://f1.%{HTTP_HOST}/$1 [L,R=301]
+
+# redirect /studios to studios.[current domain] if not already on studios subdomain
+RewriteCond %{HTTP_HOST} !^studios\. [NC]
 RewriteRule ^studios/?(.*)$ https://studios.%{HTTP_HOST}/$1 [L,R=301]
 
 
