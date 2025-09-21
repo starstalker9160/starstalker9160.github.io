@@ -6,6 +6,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
 
+RewriteRule ^f1/?(.*)$ https://f1.%{HTTP_HOST}/$1 [L,R=301]
+RewriteRule ^studios/?(.*)$ https://studios.%{HTTP_HOST}/$1 [L,R=301]
+
 
 # git
 RewriteCond %{REQUEST_URI} ^/git/(.+)$
