@@ -1,6 +1,6 @@
-# starstalker9160.github.io (starstalker.xyz)
+# starstalker9160.github.io (starstalker.dev)
 my personal portfolio website :D<br>
-This repository contains the source code and assets for my Hostinger site. You can view the live version of the site [here](https://starstalker.xyz/)
+This repository contains the source code and assets for my Hostinger site. You can view the live version of the site [here](https://starstalker.dev/)
 
 ## Technologies Used
 - **HTML5**: Structure of the site
